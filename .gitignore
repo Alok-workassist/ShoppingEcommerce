@@ -1,0 +1,24 @@
+
+# dependencies
+/node_modules
+/frontend/shopping-ecommerce/node_modules
+/frontend/shopping-ecommerce/.pnp
+/frontend/shopping-ecommerce/.pnp.js
+
+# testing
+/frontend/shopping-ecommerce/coverage
+
+# production
+/frontend/shopping-ecommerce/build
+/Backend/config/config.env
+
+# misc
+/frontend/shopping-ecommerce.DS_Store
+/frontend/shopping-ecommerce.env.local
+/frontend/shopping-ecommerce.env.development.local
+/frontend/shopping-ecommerce.env.test.local
+/frontend/shopping-ecommerce.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

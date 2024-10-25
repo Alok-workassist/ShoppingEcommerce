@@ -1,0 +1,18 @@
+.productsHeading{
+    text-align: center;
+    margin: 5vmax auto;
+    border-bottom: 1px solid rgba(21, 21, 21, 0.5);
+    width: 20vmax;
+    align-items: center;
+    font-size: 1.4vmax;
+    font-family: Roboto;
+    color: rgb(0, 0, 0, 0.7); 
+}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5vmax;
+    justify-content: center;
+    min-height: 30vh;
+}
