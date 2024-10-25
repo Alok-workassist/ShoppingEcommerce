@@ -36,10 +36,10 @@ const errorMiddleware = require('./middleware/Error');
  app.use('/api/v1/',Orders);
  app.use('/api/v1/',Payments);
 
- app.use(express.static(path.join(__dirname,"../frontend/shopping-ecommerce/build")));
- app.get("*",(req,res)=>{
-    res.sendFile(path.resolve(__dirname,"../frontend/shopping-ecommerce/build/index.html"));
- })
+//  app.use(express.static(path.join(__dirname,"../frontend/shopping-ecommerce/")));
+//  app.get("*",(req,res)=>{
+//     res.sendFile(path.resolve(__dirname,"../frontend/shopping-ecommerce/index.html"));
+//  })
 
 app.use(errorMiddleware);
 

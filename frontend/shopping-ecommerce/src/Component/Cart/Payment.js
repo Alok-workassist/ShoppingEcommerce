@@ -48,7 +48,7 @@ const Payment = () => {
     itemPrice: orderInfo.subtotal,
   };
 
-  console.log(order);
+  // console.log(order);
 
   const payBtn = useRef(null);
   const stripe = useStripe();

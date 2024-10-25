@@ -1,13 +1,13 @@
 import React, { Fragment, useEffect } from 'react';
-import './Home.css'
+import './Home.css';
 import ProductCard from './ProductCard.js';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllProducts } from '../../Action/ProductAction.js';
 import Loader from '../Layout/Loader/Loader.js';
 import Metadata from '../../Metadata.js';
-import  {useAlert}  from 'react-alert';
-const Home = () => {
+import { useAlert } from 'react-alert';
 
+const Home = () => {
     const dispatch = useDispatch();
     const alert = useAlert();
 
@@ -18,42 +18,40 @@ const Home = () => {
             alert.error(error);
         }
         dispatch(getAllProducts());
-    }, [dispatch, error,alert]);
+    }, [dispatch, error, alert]);
 
-    // const product = {
-    //     name: "Product",
-    //     price: 1200,
-    //     numOfReviews: 3
-
-    // }
     return (
         <Fragment>
-            <Metadata title={"Ecommerce Shopping|Home Page"} />
-            {loading?<Loader/>:(
+            <Metadata title={"Ecommerce Shopping | Home Page"} />
+            {loading ? <Loader /> : (
                 <Fragment>
-                     <div className='banner'>
-                <p>Welcome to Ecommerce</p>
-                <h1>Find Amazing Products Below</h1>
-                <a href='#container'>
-                    <button>Scroll</button>
-                </a>
-            </div>
-            <h2 className='homeHeading'>Featured Products</h2>
-            <div className='container' id='container'>
-                {products && products.length > 0 ?
+                    <div className='banner'>
+                        <video
+                            className='bannerVideo'
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                        >
+                            <source src="coverV.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
 
-                    (products.map((product) => (
-                        <ProductCard key={product._id} product={product} />
-                    )))
-                    : (<p>No Products Available</p>)
-                }
-            </div>
-
+                       
+                    </div>
+                    <h2 className='homeHeading'>Featured Products</h2>
+                    <div className='container' id='container'>
+                        {products && products.length > 0 ?
+                            products.map((product) => (
+                                <ProductCard key={product._id} product={product} />
+                            )) :
+                            (<p>No Products Available</p>)
+                        }
+                    </div>
                 </Fragment>
             )}
-           
         </Fragment>
-    )
+    );
 }
 
-export default Home
+export default Home;

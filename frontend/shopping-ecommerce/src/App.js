@@ -110,7 +110,7 @@ function App() {
         <Route path="/admin/reviews" element={<ProtectedRoute isAdmin={true} element={<ProductReviews />} />} />
 
         {/* Catch-All Route for Not Found */}
-        <Route path="*" element={<NotFound />} />
+        {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
 
       {/* Stripe Payment Route wrapped in Elements */}
